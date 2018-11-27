@@ -5,6 +5,57 @@ nav {
   position: static;
 }
 
+.form-content {
+  color: rgb(5, 54, 119);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.input {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 5px 8px;
+}
+
+.modal-header {
+  background-color: rgba(5, 54, 119, 1);
+  color: white;
+}
+
+.modal-footer {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.auth-message {
+  align-self: flex-start;
+  color: rgba(5, 54, 119, 0.8);
+  display: flex;
+  font-size: 20px;
+  padding: 10px 15px 10px 0;
+  margin: 0;
+}
+
+.close {
+  display: flex;
+  align-self: flex-end;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.btn {
+  color: rgba(5, 54, 119, 0.9);
+}
+
+#sign-out {
+  // background-color: rgba(255, 196, 1, 0.5);
+  background-color: inherit;
+  border: 0.5px solid silver;
+  color: black;
+}
+
 .heading {
   align-items: center;
   display: flex;
@@ -24,16 +75,18 @@ img {
 }
 
 .searchbar {
-  border: 1.5px solid rgba(5, 54, 119, 9);
+  border: 1.5px solid rgba(5, 54, 119, 0.9);
   height: 40px;
   width: 400px;
+  margin-bottom: 13px;
 }
 
 #mag {
-  border: 1.5px solid rgba(5, 54, 119, 9);
+  border: 1.5px solid rgba(5, 54, 119, 0.9);
   font-size: 18px;
   height: 40px;
   padding: 4.5px 8px 5.5px;
+  margin-left: -1px;
 }
 
 main {
