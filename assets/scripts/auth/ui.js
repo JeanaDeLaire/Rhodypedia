@@ -8,9 +8,10 @@ const signUpSuccess = data => {
   $('#sign-out').text('Log Out')
 }
 
-const signUpFailure = () => {
+const signUpFailure = (error) => {
   $('#message-up').text('Error on sign up')
   $('input:text, input:password').val('')
+  console.log(error)
 }
 
 const signInSuccess = data => {

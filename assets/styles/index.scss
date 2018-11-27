@@ -124,3 +124,20 @@ main::after {
   margin-top: 50px;
   padding: 10px;
 }
+
+// @media (max-width: 750px) {
+//   main::after {
+//     background: url('./public/images/beach.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     bottom: 0;
+//     content: '';
+//     left: 0;
+//     margin-left: auto;
+//     margin-right: auto;
+//     opacity: 0.3;
+//     right: 0;
+//     top: 0;
+//     width: 100vw;
+//     z-index: -1;
+//   }
