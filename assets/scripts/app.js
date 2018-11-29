@@ -15,6 +15,7 @@ $(() => {
     $('#main-get').css('display', 'none')
   })
   $('#get').click(function () {
+    // $('#main-get').toggle()
     $('#main-create').css('display', 'none')
   })
 })

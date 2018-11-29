@@ -8,8 +8,8 @@ const getSitesSuccess = (data) => {
   console.log(data)
   const showSitesHtml = showSitesTemplate({ sites: data.sites })
   $('#get').on('click', function () {
+    $('.content').html(showSitesHtml)
     $('#main-get').toggle()
-    $('.content').text(showSitesHtml)
   })
 }
 
