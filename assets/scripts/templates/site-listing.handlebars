@@ -1,0 +1,9 @@
+{{#each sites as |site|}}
+  {{log site}}
+
+  <div id="content" class="content">
+    <h1 data-id="{{site.id}}"> <small>Title: {{site.name}}</small></h1>
+    <p data-id="{{site.id}}"> <small>Title: {{site.description}}</small></p>
+  </div>
+
+{{/each}}

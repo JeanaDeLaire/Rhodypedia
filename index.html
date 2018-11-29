@@ -15,7 +15,7 @@
     <body>
 
       <nav class="navbar navbar-light lighten-4">
-        <a class="navbar-brand" href="#">Small state, big secrets...</a>
+        <a class="navbar-brand">Small state, big secrets...</a>
         <!-- Hamburger icon -->
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
           aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fa fa-bars fa-1x"></i></span></button>
@@ -29,12 +29,12 @@
               <div class="Sign-Up-Mod">
               <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mymodal">
                 Create Account</button> -->
-              <a class="nav-link" data-toggle="modal" data-target="#sign-up">Create Account<span class="sr-only">(current)</span></a>
+              <span class="nav-link" data-toggle="modal" data-target="#sign-up">Create Account<span class="sr-only">(current)</span></span>
               <div class="modal fade" id="sign-up">
                 <div class="modal-dialog">
                   <div class="modal-content">
                   <div class="modal-header">
-                    <h3>Sign up to become a contributor.</h3>
+                    <h3>Sign.  up to become a contributor.</h3>
                   </div>
                   <div class="modal-body">
                     <form id="sign-up-form">
@@ -113,7 +113,7 @@
             </li>
 
             <li class="nav-item">
-              <button id="sign-out" class="btn btn-light sign-out-btn" type="submit">Log Out!</button>
+              <button id="sign-out" class="btn btn-light sign-out-btn" type="submit">Log Out</button>
             </li>
           </ul>
         </div>
@@ -128,13 +128,47 @@
         </form>
       </div>
 
-    <main>
-      <div class="container">
-      <div class="blogs"><p>Sample text!</p></div>
-      <div class="blogs"><p>Sample text!</p></div>
-      <div class="blogs"><p>Sample text!</p></div>
-      <div class="blogs"><p>Sample text!</p></div>
+      <div id="jumbo" class="jumbotron">
+        <h1 id="jumbo-header" class="display-4">A Wicked Awesome App</h1>
+        <p class="lead">Rhode Island might be the smallest state, but it has a whole lot of character and a gorgeous
+          landscape riddled with hidden gems. From secret beaches to historical landmarks tucked away in recreational areas,
+          the beauty of the nation's smallest state is truly inspiring. We created this app to offer all Rhode Islanders
+          the chance to share their Rhody secrets with the world and showcase Rhody wonder.
+          </p>
+        <hr class="my-4">
+        <p>Sign up to share your knowledge, or click the start exploring button to start getting information.</p>
+        <p class="lead">
+          <button id="get" class="btn btn-light btn-lg" role="button">Start Exploring</button>
+          <button id="create" class="btn btn-light btn-lg" role="button">Start Creating</button>
+        </p>
       </div>
+
+    <div id="main-create" class="container-fluid">
+      <form class="create-content">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="...Example: Beavertail State Park">
+          <small class="form-text text-muted">Please use official names when possible.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Keywords</label>
+          <input type="text" class="form-control" placeholder="...Example: Lighthouses, Parks, Narragansett Bay">
+          <small id="emailHelp" class="form-text text-muted">Up to 3 seperated with commas.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Description</label>
+          <textarea class="form-control" rows="8"></textarea>
+        </div>
+        <div class="form-content">
+          <input type="submit" value="Publish to the world!" class="btn btn-light"></div>
+        </form>
+    </div>
+
+    <main id="main-get" class="container-fluid">
+          <div id="content" class="content container">
+            <div class="blogs">
+            </div>
+          </div>
     </main>
 
     </body>
