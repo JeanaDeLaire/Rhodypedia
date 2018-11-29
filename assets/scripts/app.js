@@ -10,6 +10,7 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('.cls').on('click', authEvents.onClear)
+  $('#add-button').on('click', siteEvents.onAddSites)
   $('#create').click(function () {
     $('#main-create').toggle()
     $('#main-get').css('display', 'none')

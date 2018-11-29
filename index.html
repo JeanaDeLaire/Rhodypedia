@@ -147,21 +147,22 @@
       <form class="create-content">
         <div class="form-group">
           <label>Title</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="...Example: Beavertail State Park">
+          <input name="site[name]" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="...Example: Beavertail State Park">
           <small class="form-text text-muted">Please use official names when possible.</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Keywords</label>
-          <input type="text" class="form-control" placeholder="...Example: Lighthouses, Parks, Narragansett Bay">
-          <small id="emailHelp" class="form-text text-muted">Up to 3 seperated with commas.</small>
+          <input name="site[keywords]" type="text" class="form-control" placeholder="...Example: Lighthouses, Parks, Narragansett Bay">
+          <small id="keywords" class="form-text text-muted">Up to 3 seperated with commas.</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Description</label>
-          <textarea class="form-control" rows="8"></textarea>
+          <textarea name="site[description]" id="description" class="form-control" rows="8"></textarea>
         </div>
         <div class="form-content">
-          <input type="submit" value="Publish to the world!" class="btn btn-light"></div>
-        </form>
+          <input id="add-button" type="submit" value="Publish to the world!" class="btn btn-light"></div>
+          <p id="add-site-message"></p>
+      </form>
     </div>
 
     <main id="main-get" class="container-fluid">

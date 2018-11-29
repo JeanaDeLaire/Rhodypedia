@@ -3,6 +3,7 @@
 // const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./rhody-api.js')
 const ui = require('./rhody-ui.js')
+const store = require('../store.js')
 
 const onGetSites = (event) => {
   event.preventDefault()
@@ -11,14 +12,29 @@ const onGetSites = (event) => {
     .catch(ui.failure)
 }
 
-// const onSignUp = event => {
+// const onAddSites = event => {
 //   event.preventDefault()
 //   const data = getFormFields(event.target)
 //   console.log(data)
-//   api.signUp(data)
-//     .then(ui.signUpSuccess)
-//     .catch(ui.signUpFailure)
+//   api.addSite(data)
+//     .then(ui.addSiteSuccess)
+//     .catch(ui.addSiteFailure)
 // }
+
+const onAddSites = event => {
+  event.preventDefault()
+  const data = {
+    name: $('#title').val(),
+    keywords: $('#keywords').val(),
+    description: $('#description').val(),
+    user_id: store.user.id
+  }
+  console.log(data)
+  api.addSite(data)
+    .then(ui.addSiteSuccess)
+    .catch(ui.addSiteFailure)
+}
+
 //
 // const onSignIn = event => {
 //   event.preventDefault()
@@ -53,5 +69,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onAddSites
 }

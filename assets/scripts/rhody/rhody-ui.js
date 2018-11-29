@@ -1,6 +1,6 @@
 'use strict'
 
-// const store = require('../store.js')
+const store = require('../store.js')
 
 const showSitesTemplate = require('../templates/site-listing.handlebars')
 
@@ -13,6 +13,18 @@ const getSitesSuccess = (data) => {
   })
 }
 
+const addSiteSuccess = (data) => {
+  store.site = data.site
+  $('#add-site-message').text('Look at you go! View all posts to check out your submission.')
+}
+
+const addSiteFailure = (error) => {
+  console.log(error)
+  $('#add-site-message').text('Fail.')
+}
+
 module.exports = {
-  getSitesSuccess
+  getSitesSuccess,
+  addSiteSuccess,
+  addSiteFailure
 }
