@@ -16,6 +16,7 @@ $(() => {
     $('#main-create').toggle()
     $('#main-get').css('display', 'none')
     $('#main-search').css('display', 'none')
+    $(this).closest('form').find('input[type=text], textarea').val('')
   })
   $('#get').click(function () {
     // $('#main-get').toggle()

@@ -36,7 +36,7 @@ const searchSitesSuccess = (data) => {
   $('#main-search').toggle()
   $('.content').html('')
   $('#main-get').css('display', 'none')
-  $('#main-create').css('display', 'none')
+  $('#main-get').css('display', 'none')
   data.sites.filter(function (el) {
     if (el.keywords) {
       if (el['keywords'].includes(input)) {
@@ -46,20 +46,12 @@ const searchSitesSuccess = (data) => {
         const showSitesHtml = showSearchTemplate({
           resultsarr: data.resultsarr
         })
-        $('.content-search').html(showSitesHtml)
+        // $('#content-search').html(showSitesHtml)
+        $('#content-search').html('Maybe one day this will work')
       }
     }
   })
 }
-
-// results.resultsarr.forEach(el => {
-//   const cellHtml = el.cells.map(i => {
-//     return `<div class=".blogs">$(i)</div>`
-//   })
-//   const container = `<div class=".content">${cellHtml.join('')}</div>`
-//   $('.content').html(container)
-//   // $('#main-search').toggle()
-// })
 
 // const searchSitesFailure = (data) => {}
 
