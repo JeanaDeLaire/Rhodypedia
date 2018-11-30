@@ -27,17 +27,22 @@ const addSiteFailure = (error) => {
 
 let results = { resultsarr: [] }
 
+// const searchTemplate = $('#search-template').html()
+// const compiledSearchTemplate = Handlebars.compile(searchTemplate)
+
 const searchSitesSuccess = (data) => {
   results = { resultsarr: [] }
   const input = $('.searchbar').val()
   $('#main-search').toggle()
   $('.content').html('')
   $('#main-get').css('display', 'none')
+  $('#main-create').css('display', 'none')
   data.sites.filter(function (el) {
     if (el.keywords) {
       if (el['keywords'].includes(input)) {
         results.resultsarr.push(el)
         console.log(results)
+        // $('#search-container').html(compiledSearchTemplate(results))
         const showSitesHtml = showSearchTemplate({
           resultsarr: data.resultsarr
         })
