@@ -154,19 +154,19 @@ label {
   z-index: -1;
 }
 
-main {
+#main-search {
   background-color: rgba(115, 115, 115, 0.1);
   display: none;
-  height: fit-content;
+  overflow: scroll;
   padding-top: 30px;
   position: relative;
   margin-top: -32px;
 }
 
-main::after {
-  background: url('./public/images/beach.jpg');
+#main-search::after {
+  background: url('./public/images/Ninigret.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   bottom: 0;
   content: '';
   left: 0;
@@ -176,7 +176,33 @@ main::after {
   position: absolute;
   right: 0;
   top: 0;
-  width: 100%;
+  // width: ;
+  z-index: -1;
+}
+
+main {
+  background-color: rgba(115, 115, 115, 0.1);
+  display: none;
+  overflow: scroll;
+  padding-top: 30px;
+  position: relative;
+  margin-top: -32px;
+}
+
+main::after {
+  background: url('./public/images/Blackstone-River-Bikeway.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: '';
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  // width: ;
   z-index: -1;
 }
 
@@ -189,6 +215,8 @@ main::after {
   grid-template-columns: auto auto;
   margin: 35px auto;
   margin-bottom: 55px;
+  overflow: scroll;
+  height: 100vh;
 }
 
 .blogs {
@@ -198,7 +226,7 @@ main::after {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 40vh;
+  height: 35vh;
   margin: auto;
   opacity: 0.8;
   padding: 10px;

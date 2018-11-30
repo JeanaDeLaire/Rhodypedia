@@ -10,8 +10,8 @@ const getSites = function () {
   })
 }
 
-const addSite = data1 => {
-  console.log(data1)
+const addSite = dataa => {
+  console.log(dataa)
   return $.ajax({
     url: config.apiUrl + '/sites',
     method: 'POST',
@@ -19,18 +19,18 @@ const addSite = data1 => {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
-      'site': data1
+      'site': dataa
     }
   })
 }
 
-// const signIn = data => {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-in',
-//     method: 'POST',
-//     data
-//   })
-// }
+const searchSites = (data) => {
+  return $.ajax({
+    url: config.apiUrl + '/sites',
+    method: 'GET'
+  })
+}
+
 //
 // const changePassword = data => {
 //   return $.ajax({
@@ -55,5 +55,6 @@ const addSite = data1 => {
 
 module.exports = {
   getSites,
-  addSite
+  addSite,
+  searchSites
 }

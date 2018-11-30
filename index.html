@@ -152,8 +152,8 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Keywords</label>
-          <input name="site[keywords]" type="text" class="form-control" placeholder="...Example: Lighthouses, Parks, Narragansett Bay">
-          <small id="keywords" class="form-text text-muted">Up to 3 seperated with commas.</small>
+          <input id="keywords" name="site[keywords]" type="text" class="form-control" placeholder="...Example: Lighthouses, Parks, Narragansett Bay">
+          <small class="form-text text-muted">Up to 3 seperated with commas.</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Description</label>
@@ -165,12 +165,19 @@
       </form>
     </div>
 
+    <div id="main-search" class="container-fluid">
+          <div id="content-search" class="content container">
+            <div class="blogs">
+            </div>
+          </div>
+    </div>
+
     <main id="main-get" class="container-fluid">
           <div id="content" class="content container">
             <div class="blogs">
             </div>
           </div>
     </main>
-
+    <script src='js/handlebars-v4.0.5.js'></script>
     </body>
 </html>
