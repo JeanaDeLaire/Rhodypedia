@@ -6,6 +6,8 @@ const signUpSuccess = data => {
   $('#message-up').text('Signed up successfully')
   $('input:text, input:password').val('')
   $('#sign-out').text('Log Out')
+  $('#skip-sign-up').hide()
+  $('#sign-up-close').show()
 }
 
 const signUpFailure = (error) => {
@@ -19,6 +21,7 @@ const signInSuccess = data => {
   $('#message-in').text('You are now sigined in.')
   $('input:text, input:password').val('')
   $('#sign-out').text('Log Out')
+  $('#sign-in-close').show()
 }
 
 const signInFailure = () => {
@@ -40,6 +43,7 @@ const signOutSuccess = data => {
   store.user = null
   $('#sign-out').text('You are now logged out.')
   $('input:text, input:password').val('')
+  $('#sign-up').modal('show')
 }
 
 const signOutFailure = () => {

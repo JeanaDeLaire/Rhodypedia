@@ -13,7 +13,6 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-
       <nav class="navbar navbar-light lighten-4">
         <a class="navbar-brand">Small state, big secrets...</a>
         <!-- Hamburger icon -->
@@ -29,8 +28,8 @@
               <div class="Sign-Up-Mod">
               <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mymodal">
                 Create Account</button> -->
-              <span class="nav-link" data-toggle="modal" data-target="#sign-up">Create Account<span class="sr-only">(current)</span></span>
-              <div class="modal fade" id="sign-up">
+              <!-- <span class="nav-link" data-toggle="modal" data-target="#sign-up">Create Account<span class="sr-only">(current)</span></span> -->
+              <!-- <div class="modal fade" id="sign-up">
                 <div class="modal-dialog">
                   <div class="modal-content">
                   <div class="modal-header">
@@ -51,7 +50,7 @@
                   </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             </li>
 
@@ -59,8 +58,8 @@
               <div class="Sign-In-Mod">
               <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mymodal">
                 Create Account</button> -->
-              <a class="nav-link" data-toggle="modal" data-target="#sign-in">Sign In<span class="sr-only">(current)</span></a>
-              <div class="modal fade" id="sign-in">
+              <!-- <a class="nav-link" data-toggle="modal" data-target="#sign-in">Sign In<span class="sr-only">(current)</span></a> -->
+              <!-- <div class="modal fade" id="sign-in">
                 <div class="modal-dialog">
                   <div class="modal-content">
                   <div class="modal-header">
@@ -80,7 +79,7 @@
                   </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             </li>
 
@@ -118,6 +117,55 @@
           </ul>
         </div>
       </nav>
+
+<!-- Sign Up Modal -->
+      <div class="modal fade" id="sign-up" data-backdrop='static' data-keyboard="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h3>Sign up to explore Rhodypedia.</h3>
+          </div>
+          <div class="modal-body">
+            <form id="sign-up-form">
+              <div class="form-content">Email: <input class="input" name="credentials[email]" type="text"></div>
+              <div class="form-content">Username: <input class="input" name="credentials[username]" type="text"></div>
+              <div class="form-content">Password: <input class="input" name="credentials[password]" type="password"></div>
+              <div class="form-content">Confirm Password: <input class="input" name="credentials[password_confirmation]" type="password"></div>
+              <div class="form-content"><input type="submit" value="Sign Up" class="btn btn-light"/></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="auth-message" id="message-up"></p>
+            <!-- <span class="close"><button type="submit" class="cls btn btn-light" data-dismiss="modal">Close</button></span> -->
+            <div id="skip-sign-up"><button type="button" class="cls btn btn-light" data-toggle="modal" data-target="#sign-in" data-dismiss="modal">Already have an account?</button></div>
+            <div id="sign-up-close" class="close"><button type="button" class="cls btn btn-light" data-toggle="modal" data-target="#sign-in" data-dismiss="modal">Close</button></div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Sign In Modal -->
+      <div class="modal fade" id="sign-in" data-backdrop='static' data-keyboard="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h3>Sign in to share your Rhody secrets.</h3>
+          </div>
+          <div class="modal-body">
+            <form id="sign-in-form">
+              <div class="form-content">Username: <input class="input" type="text" name="credentials[username]"></div>
+              <div class="form-content">Email: <input class="input" name="credentials[email]" type="text"></div>
+              <div class="form-content">Password: <input class="input" name="credentials[password]" type="password"></div>
+              <div class="form-content"><input type="submit" value="Sign In" class="btn btn-light"/></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="auth-message" id="message-in"></p>
+            <div id="sign-in-close" class="close"><button type="button" class="cls btn btn-light" data-dismiss="modal">Close</button></div>
+          </div>
+          </div>
+        </div>
+      </div>
 
       <div class="heading">
         <h1 class="title">Rhodypedia</h1>
