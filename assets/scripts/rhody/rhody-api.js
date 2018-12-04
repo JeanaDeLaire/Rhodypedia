@@ -31,14 +31,20 @@ const searchSites = (data) => {
   })
 }
 
-const updateSite = data => {
+const updateSite = (data) => {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + `/sites/${store.site.id}`,
+    url: config.apiUrl + `/sites/${data.id}`,
+    // url: config.apiUrl + '/sites/' + siteId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: {
+      site: {
+        description: data.description
+      }
+    }
   })
 }
 

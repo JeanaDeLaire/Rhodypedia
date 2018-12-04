@@ -35,8 +35,10 @@ const onSearchSites = event => {
 
 const onUpdateSite = event => {
   event.preventDefault()
-  const siteId = $(event.target).closest('section').data('id')
-  api.updateSite(siteId)
+  const data = {}
+  data.description = $(event.target).closest('form').find('textarea').val()
+  data.id = $(event.target).closest('section').data('id')
+  api.updateSite(data)
     .then(ui.updateSiteSuccess)
     .catch(ui.updateSiteFailure)
 }
@@ -53,7 +55,9 @@ const onDeleteSite = (event) => {
 const addHandlers = () => {
   $('#get').on('click', onGetSites)
   $('.content').on('click', '.delete-site', onDeleteSite)
+  $('.content').on('click', '.append-button', onUpdateSite)
 }
+
 
 module.exports = {
   addHandlers,

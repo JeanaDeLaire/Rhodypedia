@@ -6,7 +6,7 @@
       <h2>{{name}}</h2>
       <p><span>Site ID:</span> {{id}}  |  <span>Keywords:</span> {{keywords}}</p>
       <p class="blog-details">Details: {{description}}</p>
-      <p class="blog-comments">{{comments}}</p>
+      <!-- <p class="blog-comments">{{comments}}</p> -->
 
       <p>
         <a class="btn btn-default" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add to this post</a>
@@ -16,9 +16,16 @@
         <div class="col">
           <div class="collapse multi-collapse" id="multiCollapseExample1">
             <div class="card card-body">
-              <form>
-  <p>Sample sample</p>
-  </form>
+              <form class="append-content">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Description</label>
+                  <!-- <textarea name="site[description]" id="description" class="form-control" rows="8"></textarea> -->
+                  <textarea name="site[description]" class="form-control" rows="8"></textarea>
+                </div>
+                <div class="form-content">
+                  <input type="submit" value="Add to this post" class="btn btn-light append-button"></div>
+                  <p id="add-site-message"></p>
+              </form>
             </div>
           </div>
         </div>
