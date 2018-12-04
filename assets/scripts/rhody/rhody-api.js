@@ -31,30 +31,31 @@ const searchSites = (data) => {
   })
 }
 
-//
-// const changePassword = data => {
-//   return $.ajax({
-//     url: config.apiUrl + '/change-password',
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
-//
-// const signOut = () => {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-out',
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const updateSite = data => {
+  return $.ajax({
+    url: config.apiUrl + `/sites/${store.site.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const deleteSite = (siteId) => {
+  return $.ajax({
+    url: config.apiUrl + '/sites/' + siteId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   getSites,
   addSite,
-  searchSites
+  searchSites,
+  updateSite,
+  deleteSite
 }

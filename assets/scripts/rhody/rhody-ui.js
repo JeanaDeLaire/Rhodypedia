@@ -55,11 +55,26 @@ const searchSitesSuccess = (data) => {
 
 // const searchSitesFailure = (data) => {}
 
+const updateSiteSuccess = data => {
+  $('.blog-comments').append()
+}
+
+const updateSiteFailure = () => {
+  $('.blog-comments').text('Move failed')
+}
+
+const failure = (error) => {
+  console.log(error)
+}
+
 module.exports = {
   getSitesSuccess,
   addSiteSuccess,
   addSiteFailure,
   results,
-  searchSitesSuccess
+  searchSitesSuccess,
   // searchSitesFailure
+  updateSiteSuccess,
+  updateSiteFailure,
+  failure
 }

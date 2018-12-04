@@ -22,6 +22,7 @@ $(() => {
   $('#get').click(function () {
     // $('#main-get').toggle()
     $('#main-create').css('display', 'none')
+    $('.delete-site').on('click', siteEvents.onDeleteSite)
   })
 })
 

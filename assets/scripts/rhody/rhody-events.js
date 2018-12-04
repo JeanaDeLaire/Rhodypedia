@@ -12,15 +12,6 @@ const onGetSites = (event) => {
     .catch(ui.failure)
 }
 
-// const onAddSites = event => {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   console.log(data)
-//   api.addSite(data)
-//     .then(ui.addSiteSuccess)
-//     .catch(ui.addSiteFailure)
-// }
-
 const onAddSites = event => {
   event.preventDefault()
   const data = {
@@ -42,12 +33,32 @@ const onSearchSites = event => {
     .catch(ui.searchSitesfailure)
 }
 
+const onUpdateSite = event => {
+  event.preventDefault()
+  const siteId = $(event.target).closest('section').data('id')
+  api.updateSite(siteId)
+    .then(ui.updateSiteSuccess)
+    .catch(ui.updateSiteFailure)
+}
+
+const onDeleteSite = (event) => {
+  console.log(event)
+  event.preventDefault()
+  const siteId = $(event.target).closest('section').data('id')
+  api.deleteSite(siteId)
+    .then(() => onGetSites(event))
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('#get').on('click', onGetSites)
+  $('.content').on('click', '.delete-site', onDeleteSite)
 }
 
 module.exports = {
   addHandlers,
   onAddSites,
-  onSearchSites
+  onSearchSites,
+  onUpdateSite,
+  onDeleteSite
 }
