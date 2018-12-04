@@ -44,7 +44,7 @@ const updateSite = data => {
 
 const deleteSite = (siteId) => {
   return $.ajax({
-    url: config.apiUrl + '/sites' + siteId,
+    url: config.apiUrl + '/sites/' + siteId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
