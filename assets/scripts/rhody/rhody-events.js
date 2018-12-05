@@ -58,7 +58,6 @@ const addHandlers = () => {
   $('.content').on('click', '.append-button', onUpdateSite)
 }
 
-
 module.exports = {
   addHandlers,
   onAddSites,
