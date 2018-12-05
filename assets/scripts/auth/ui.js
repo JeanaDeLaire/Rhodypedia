@@ -44,6 +44,7 @@ const signOutSuccess = data => {
   $('#sign-out').text('You are now logged out.')
   $('input:text, input:password').val('')
   $('#sign-up').modal('show')
+  $('.navbar-collapse').collapse('hide')
 }
 
 const signOutFailure = () => {
