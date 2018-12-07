@@ -6,14 +6,12 @@ const signUpSuccess = data => {
   $('#message-up').text('Signed up successfully')
   $('input:text, input:password').val('')
   $('#sign-out').text('Log Out')
-  $('#skip-sign-up').hide()
-  $('#sign-up-close').show()
+  $('#skip').html("Let's get you signed in.")
 }
 
-const signUpFailure = (error) => {
+const signUpFailure = () => {
   $('#message-up').text('Error on sign up')
   $('input:text, input:password').val('')
-  console.log(error)
 }
 
 const signInSuccess = data => {
@@ -27,6 +25,7 @@ const signInSuccess = data => {
 const signInFailure = () => {
   $('#message-in').text('Error on sign in')
   $('input:text, input:password').val('')
+  $('#skip-sign-up').show()
 }
 
 const changePasswordSuccess = data => {
@@ -44,6 +43,9 @@ const signOutSuccess = data => {
   $('#sign-out').text('You are now logged out.')
   $('input:text, input:password').val('')
   $('#sign-up').modal('show')
+  $('.navbar-collapse').collapse('hide')
+  $('#skip').html('Already have an account?')
+  $('#sign-in-close').hide()
 }
 
 const signOutFailure = () => {

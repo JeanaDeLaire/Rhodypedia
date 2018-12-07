@@ -24,7 +24,3 @@ $(() => {
     $('.delete-site').on('click', siteEvents.onDeleteSite)
   })
 })
-
-// $('#create').click(function () {
-//   $('#main-get').toggle()
-// })

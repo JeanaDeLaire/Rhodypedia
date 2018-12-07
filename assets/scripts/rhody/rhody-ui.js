@@ -2,7 +2,7 @@
 
 const store = require('../store.js')
 const showSitesTemplate = require('../templates/site-listing.handlebars')
-// const showSearchTemplate = require('../templates/search-listing.handlebars')
+const showSearchTemplate = require('../templates/search-listing.handlebars')
 
 const getSitesSuccess = (data) => {
   console.log(data)
@@ -26,35 +26,60 @@ const addSiteFailure = (error) => {
   $('#add-site-message').text('Fail.')
 }
 
-// let results = { resultsarr: [] }
-
-// const searchTemplate = $('#search-template').html()
-// const compiledSearchTemplate = Handlebars.compile(searchTemplate)
-//
 // const searchSitesSuccess = (data) => {
-//   results = { resultsarr: [] }
-//   const input = $('.searchbar').val()
-//   $('#main-search').toggle()
-//   $('.content').html('')
-//   $('#main-get').css('display', 'none')
-//   $('#main-get').css('display', 'none')
-//   data.sites.filter(function (el) {
-//     if (el.keywords) {
-//       if (el['keywords'].includes(input)) {
-//         results.resultsarr.push(el)
-//         console.log(results)
-//         // $('#search-container').html(compiledSearchTemplate(results))
-//         const showSitesHtml = showSearchTemplate({
-//           resultsarr: data.resultsarr
-//         })
-//         // $('#content-search').html(showSitesHtml)
-//         $('#content-search').html('Maybe one day this will work')
-//       }
-//     }
+//   console.log(data)
+//   const showSitesHtml = showSearchTemplate({
+//     sites: data.sites
 //   })
+//   console.log(data)
+//   $('.content').html('')
+//   $('.content').html(showSitesHtml)
+//   $('#main-get').css('display', 'none')
+//   $('#main-search').toggle()
 // }
 
-// const searchSitesFailure = (data) => {}
+let results = { resultsarr: [] }
+
+const searchSitesSuccess = (data) => {
+  results = { resultsarr: [] }
+  const input = $('.searchbar').val()
+  // api data and incoming data should be lowercased before comparing
+  data.sites.filter(function (el) {
+    if (el.keywords) {
+      if (el['keywords'].includes(input)) {
+        results.resultsarr.push(el)
+        console.log(results)
+        // const showSitesHtml = showSearchTemplate({
+        //   resultsarr: data.resultsarr
+        // })
+        // $('.content-search').html(showSitesHtml)
+      } else {
+        console.log('No match')
+      }
+    }
+  })
+  // go through each object within the array
+  // results.resultsarr.forEach(el => {
+  //   // print each object within a div class = content
+  //   const elFront = JSON.stringify(el.id)
+  //   $('#main-search').text(elFront)
+  const showSitesHtml = showSearchTemplate({
+    resultsarr: results.resultsarr
+  })
+    // each individual object should be within div class = blogs
+
+    // each name should be within an h2
+
+    // each site id and each keywords should be within a paragraph
+    // with spans around them
+
+    // each description should be within a paragraph with a class blog details
+  // })
+  $('#main-search').toggle()
+  $('.content').html('')
+  $('.content').html(showSitesHtml)
+  $('#main-get').css('display', 'none')
+}
 
 const updateSiteSuccess = data => {
   const formDescription = $(event.target).closest('form').find('textarea').val()
@@ -76,7 +101,7 @@ module.exports = {
   addSiteSuccess,
   addSiteFailure,
   // results,
-  // searchSitesSuccess,
+  searchSitesSuccess,
   // searchSitesFailure
   updateSiteSuccess,
   updateSiteFailure,
