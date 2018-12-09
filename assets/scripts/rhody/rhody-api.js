@@ -11,7 +11,6 @@ const getSites = function () {
 }
 
 const addSite = dataa => {
-  console.log(dataa)
   return $.ajax({
     url: config.apiUrl + '/sites',
     method: 'POST',
@@ -32,7 +31,6 @@ const searchSites = (data) => {
 }
 
 const updateSite = (data) => {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + `/sites/${data.id}`,
     // url: config.apiUrl + '/sites/' + siteId,

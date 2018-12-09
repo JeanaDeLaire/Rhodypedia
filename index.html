@@ -19,74 +19,13 @@
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
           aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fa fa-bars fa-1x"></i></span></button>
 
-        <!-- Collapsible content -->
+        <!-- Collapsible Menu with CP and Logout -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
 
-          <!-- Links -->
+          <!-- Change PW Modal and Logout Button -->
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <div class="Sign-Up-Mod">
-              <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mymodal">
-                Create Account</button> -->
-              <!-- <span class="nav-link" data-toggle="modal" data-target="#sign-up">Create Account<span class="sr-only">(current)</span></span> -->
-              <!-- <div class="modal fade" id="sign-up">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                  <div class="modal-header">
-                    <h3>Sign.  up to become a contributor.</h3>
-                  </div>
-                  <div class="modal-body">
-                    <form id="sign-up-form">
-                      <div class="form-content">Email: <input class="input" name="credentials[email]" type="text"></div>
-                      <div class="form-content">Username: <input class="input" name="credentials[username]" type="text"></div>
-                      <div class="form-content">Password: <input class="input" name="credentials[password]" type="password"></div>
-                      <div class="form-content">Confirm Password: <input class="input" name="credentials[password_confirmation]" type="password"></div>
-                      <div class="form-content"><input type="submit" value="Sign Up" class="btn btn-light"/></div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <p class="auth-message" id="message-up"></p>
-                    <span class="close"><button type="submit" class="cls btn btn-light" data-dismiss="modal">Close</button></span>
-                  </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="Sign-In-Mod">
-              <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mymodal">
-                Create Account</button> -->
-              <!-- <a class="nav-link" data-toggle="modal" data-target="#sign-in">Sign In<span class="sr-only">(current)</span></a> -->
-              <!-- <div class="modal fade" id="sign-in">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                  <div class="modal-header">
-                    <h3>Sign in to share your Rhody secrets.</h3>
-                  </div>
-                  <div class="modal-body">
-                    <form id="sign-in-form">
-                      <div class="form-content">Username: <input class="input" type="text" name="credentials[username]"></div>
-                      <div class="form-content">Email: <input class="input" name="credentials[email]" type="text"></div>
-                      <div class="form-content">Password: <input class="input" name="credentials[password]" type="password"></div>
-                      <div class="form-content"><input type="submit" value="Sign In" class="btn btn-light"/></div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <p class="auth-message" id="message-in"></p>
-                    <div class="close"><button type="button" class="cls btn btn-light" data-dismiss="modal">Close</button></div>
-                  </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
-            </li>
-
             <li class="nav-item">
               <div class="Change-Pw-Mod">
-              <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mymodal">
-                Create Account</button> -->
               <a class="nav-link" data-toggle="modal" data-target="#cp">Change Password<span class="sr-only">(current)</span></a>
               <div class="modal fade" id="cp">
                 <div class="modal-dialog">
@@ -118,7 +57,7 @@
         </div>
       </nav>
 
-<!-- Sign Up Modal -->
+      <!-- Sign Up Modal -->
       <div class="modal fade" id="sign-up" data-backdrop='static' data-keyboard="false">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -136,7 +75,6 @@
           </div>
           <div class="modal-footer">
             <p class="auth-message" id="message-up"></p>
-            <!-- <span class="close"><button type="submit" class="cls btn btn-light" data-dismiss="modal">Close</button></span> -->
             <div id="skip-sign-up"><button id='skip' type="button" class="cls btn btn-light" data-toggle="modal" data-target="#sign-in" data-dismiss="modal">Already have an account?</button></div>
             <div id="sign-up-close" class="close"><button type="button" class="cls btn btn-light" data-toggle="modal" data-target="#sign-in" data-dismiss="modal">Close</button></div>
           </div>
@@ -144,7 +82,7 @@
         </div>
       </div>
 
-<!-- Sign In Modal -->
+      <!-- Sign In Modal -->
       <div class="modal fade" id="sign-in" data-backdrop='static' data-keyboard="false">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -226,9 +164,6 @@
             </div>
           </div>
     </main>
-
-    <!-- <div id="search-container" class="content">
-    </div> -->
 
     </body>
 </html>

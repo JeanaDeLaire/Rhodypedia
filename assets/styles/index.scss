@@ -12,8 +12,8 @@ nav {
 }
 
 .input {
-  margin: 10px;
   border-radius: 4px;
+  margin: 10px;
   padding: 5px 8px;
 }
 
@@ -23,10 +23,10 @@ nav {
 }
 
 .modal-footer {
-  display: flex;
   color: white;
-  justify-content: space-between;
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .auth-message {
@@ -34,18 +34,20 @@ nav {
   color: rgba(5, 54, 119, 0.8);
   display: flex;
   font-size: 20px;
-  padding: 10px 15px 10px 0;
   margin: 0;
+  padding: 10px 15px 10px 0;
 }
 
 .close {
-  display: flex;
   align-self: flex-end;
-  margin: 0;
   border-radius: 5px;
+  display: flex;
+  margin: 0;
 }
 
 .btn {
+  border: 1px solid rgba(5, 54, 119, 0.3);
+  background-color: 1px solid rgba(5, 54, 119, 0.1);
   color: rgba(5, 54, 119, 0.9);
 }
 
@@ -58,8 +60,8 @@ nav {
 }
 
 #sign-out {
-  border: 0;
   background-color: inherit;
+  border: 0;
   color: black;
   padding-left: 0;
 }
@@ -73,7 +75,7 @@ nav {
 }
 
 h1 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
@@ -86,7 +88,7 @@ span {
 
 .title {
   color: rgba(5, 54, 119, 9);
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 60px;
   font-weight: 500;
 }
@@ -100,38 +102,40 @@ img {
 .searchbar {
   border: 1.5px solid rgba(5, 54, 119, 0.9);
   height: 40px;
-  width: 55vw;
+  margin-bottom: 13px;
   max-width: 400px;
   min-width: 300px;
-  margin-bottom: 13px;
+  width: 55vw;
 }
 
 #mag {
   border: 1.5px solid rgba(5, 54, 119, 0.9);
   font-size: 18px;
   height: 40px;
-  padding: 4.5px 8px 5.5px;
   margin-left: -1px;
+  padding: 4.5px 8px 5.5px;
 }
 
 #jumbo {
-  text-align: center;
+  border-bottom: 1px solid rgba(5, 54, 119, 0.2);
+  border-top: 1px solid rgba(5, 54, 119, 0.2);
   color: rgb(5, 54, 119);
-  position: relative;
   display: block;
   height: fit-content;
+  position: relative;
+  text-align: center;
 }
 
 #get {
-  margin: 5px 40px;
   background-color: rgba(255, 196, 1, 0.9);
   border: 0;
+  margin: 5px 40px;
 }
 
 #create {
-  margin: 5px 40px;
   background-color: rgba(255, 196, 1, 0.9);
   border: 0;
+  margin: 5px 40px;
 }
 
 label {
@@ -142,8 +146,8 @@ label {
 .create-content {
   background-color: white;
   border-bottom: 1px solid rgba(115, 115, 115, 0.4);
-  border-right: 1px solid rgba(115, 115, 115, 0.4);
   border-radius: 5px;
+  border-right: 1px solid rgba(115, 115, 115, 0.4);
   margin: auto;
   margin-bottom: 75px;
   margin-top: 50px;
@@ -157,9 +161,9 @@ label {
   background-color: rgba(115, 115, 115, 0.1);
   display: none;
   height: fit-content;
+  margin-top: -32px;
   padding-top: 30px;
   position: relative;
-  margin-top: -32px;
 }
 
 #main-create::after {
@@ -183,9 +187,9 @@ label {
   background-color: rgba(115, 115, 115, 0.1);
   display: none;
   height: fit-content;
+  margin-top: -32px;
   padding-top: 30px;
   position: relative;
-  margin-top: -32px;
 }
 
 #main-search::after {
@@ -197,7 +201,7 @@ label {
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.3;
+  opacity: 0.4;
   position: absolute;
   right: 0;
   top: 0;
@@ -208,10 +212,10 @@ label {
 main {
   background-color: rgba(115, 115, 115, 0.1);
   display: none;
+  margin-top: -32px;
   overflow: scroll;
   padding-top: 30px;
   position: relative;
-  margin-top: -32px;
 }
 
 main::after {
@@ -232,33 +236,33 @@ main::after {
 }
 
 .container {
+  align-items: center;
   display: grid;
   grid-column-gap: 0;
   grid-row-gap: 0;
-  justify-content: center;
-  align-items: center;
   grid-template-columns: auto;
+  height: 90vh;
+  justify-content: center;
   margin: 35px auto;
   margin-bottom: 55px;
   overflow: scroll;
-  height: 90vh;
 }
 
 .blogs {
   background-color: white;
   border-bottom: 1px solid rgba(115, 115, 115, 0.4);
-  border-right: 1px solid rgba(115, 115, 115, 0.4);
   border-radius: 5px;
+  border-right: 1px solid rgba(115, 115, 115, 0.4);
   display: flex;
   flex-direction: column;
   height: 35vh;
   margin: auto;
-  opacity: 0.8;
-  padding: 40px 35px 40px 20px;
-  width: 55vw;
   min-width: 300px;
-  text-align: center;
+  opacity: 0.8;
   overflow: scroll;
+  padding: 40px 35px 40px 20px;
+  text-align: center;
+  width: 55vw;
 }
 
 .blog-details {
@@ -268,16 +272,16 @@ main::after {
 .heroku {
   border: 1px solid rgba(115, 115, 115, 0.4);
   border-radius: 5px;
-  width: 50vw;
   margin: 0 auto;
+  width: 50vw;
 }
 
 .description {
   margin: 0 auto;
 }
 
-@media (max-width: 750px) {
-  .container {
-    grid-template-columns: auto;
+@media (max-width: 700px) {
+  .searchbar {
+    width: 50vw;
   }
 }

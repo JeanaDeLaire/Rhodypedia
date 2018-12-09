@@ -20,7 +20,6 @@ const onAddSites = event => {
     description: $('#description').val(),
     user_id: store.user.id
   }
-  console.log(data)
   api.addSite(data)
     .then(ui.addSiteSuccess)
     .catch(ui.addSiteFailure)
@@ -44,7 +43,6 @@ const onUpdateSite = event => {
 }
 
 const onDeleteSite = (event) => {
-  console.log(event)
   event.preventDefault()
   const siteId = $(event.target).closest('section').data('id')
   api.deleteSite(siteId)
