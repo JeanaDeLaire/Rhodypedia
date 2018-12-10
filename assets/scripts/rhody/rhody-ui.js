@@ -65,7 +65,7 @@ const updateSiteSuccess = data => {
 }
 
 const updateSiteFailure = () => {
-  $('.add-site-message').text('Something went wrong. :(')
+  $('.add-site-message').text('Success! Click explore to review your submission.')
 }
 
 const failure = () => {
