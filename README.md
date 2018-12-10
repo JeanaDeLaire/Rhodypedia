@@ -26,7 +26,7 @@ The database runs on Rails with a one to many relationship between users and sit
 
 A few improvements that should be made will include clearning all forms, and ensuring that content sections that appear from Get requests hide when a user logs out.
 
-Future versions of this app will add in a comment table to the database so that additional users can contribute to sites created by other users. 
+Future versions of this app will add in a comment table to the database so that additional users can contribute to sites created by other users.
 
 ##
 This project was created for the PVD 4 Cohort project for the Web Development Immersive

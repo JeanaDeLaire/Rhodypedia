@@ -60,11 +60,12 @@ const searchSitesFailure = () => {
 const updateSiteSuccess = data => {
   const formDescription = $(event.target).closest('form').find('textarea').val()
   data.details.append(formDescription)
-  $('#create-form').find('input[type=text], textarea').val('')
+  $('.append-content').find('input[type=text], textarea').val('')
+  $('.add-site-message').text('Updated! Click the explore button to review your submission.')
 }
 
 const updateSiteFailure = () => {
-  $('.blog-comments').text('Something went wrong. :(')
+  $('.add-site-message').text('Something went wrong. :(')
 }
 
 const failure = () => {
