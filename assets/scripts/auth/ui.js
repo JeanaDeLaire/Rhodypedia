@@ -16,10 +16,10 @@ const signUpFailure = () => {
 
 const signInSuccess = data => {
   store.user = data.user
-  $('#message-in').text('You are now sigined in.')
+  $('#sign-in').modal('hide')
   $('input:text, input:password').val('')
   $('#sign-out').text('Log Out')
-  $('#sign-in-close').show()
+  // $('#sign-in-close').show()
 }
 
 const signInFailure = () => {

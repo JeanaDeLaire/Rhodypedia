@@ -5,6 +5,21 @@ nav {
   position: static;
 }
 
+h3 {
+  margin: 0 auto;
+}
+
+.form-span {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  width: 159px;
+}
+
+.modal-input {
+  width: 60%;
+}
+
 .form-content {
   color: rgb(5, 54, 119);
   font-size: 15px;
