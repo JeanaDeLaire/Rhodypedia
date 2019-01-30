@@ -1,8 +1,8 @@
 # Welcome to Rhodypedia
 
 ##### View the live site here... https://jeanadelaire.github.io/Rhodypedia/
+##### Link to backend repo: https://github.com/JeanaDeLaire/rhodypedia-api
 ##### Link to backend: https://lit-dusk-51205.herokuapp.com/
-##### Link to backend repo: https://lit-dusk-51205.herokuapp.com/
 
 This project was completed for a full-stack development training course. Motivation to create this project originates in the idea that Rhode Island offers many obscure outdoor attractions. The state also has a lot of quirks. Who better to share these secrets than locals? This full-stack application is meant to be a place for many users to share resources and create a digital center for people to communicate about state attractions.
 
