@@ -1,6 +1,6 @@
 # Welcome to Rhodypedia
 
-##### View the live site here... https://jeanadelaire.github.io/Rhodypedia/
+##### View the live site here: https://jeanadelaire.github.io/Rhodypedia/
 ##### Link to backend repo: https://github.com/JeanaDeLaire/rhodypedia-api
 ##### Link to backend: https://lit-dusk-51205.herokuapp.com/
 
