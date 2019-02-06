@@ -21,7 +21,7 @@ const addSiteSuccess = (data) => {
 }
 
 const addSiteFailure = () => {
-  $('#add-site-message').text('Fail.')
+  $('#add-site-message').text('Sign up to create an account.')
 }
 
 let results = { resultsarr: [] }
