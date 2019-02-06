@@ -6,7 +6,7 @@ const siteEvents = require('./rhody/rhody-events.js')
 $(() => {
   siteEvents.addHandlers()
 
-  $('#sign-up').modal('show')
+  // $('#sign-up').modal('show')
 
   $('#sign-up-form').on('submit', authEvents.onSignUp)
 
