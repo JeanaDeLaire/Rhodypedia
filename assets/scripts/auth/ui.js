@@ -69,7 +69,9 @@ const signOutSuccess = data => {
 
 // inform user if something goes wrong when they attempt to sign out
 const signOutFailure = () => {
+  // change text of button if something oges wrong
   $('#sign-out').text('Something went wrong. Sign out again.')
+  // clear all forms as an added precaution
   $('input:text, input:password').val('')
 }
 

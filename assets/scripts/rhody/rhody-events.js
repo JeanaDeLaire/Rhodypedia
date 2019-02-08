@@ -6,8 +6,11 @@ const ui = require('./rhody-ui.js')
 const store = require('../store.js')
 
 const onGetSites = (event) => {
+  // prevent page from reloading
   event.preventDefault()
+  // make api call
   api.getSites()
+    // offer feedback to user
     .then(ui.getSitesSuccess)
     .catch(ui.failure)
 }
