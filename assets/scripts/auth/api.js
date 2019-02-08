@@ -1,7 +1,11 @@
 'use strict'
-
+// obtain production and development url from config vile
 const config = require('../config.js')
+// obtain current user information from store
 const store = require('../store.js')
+
+// send data to api
+// send token info for cp (patch) and sign out (delete)
 
 const signUp = data => {
   return $.ajax({
