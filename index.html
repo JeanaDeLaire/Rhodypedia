@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Rhodypedia</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+  <nav class="navbar navbar-light lighten-4">
+    <span class="navbar-brand">Small state, big secrets...</span>
+    <!-- Hamburger icon -->
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fa fa-bars fa-1x"></i></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+      <!-- Links -->
+      <!-- signed out user nav -->
+      <ul class="navbar-nav mr-auto nav-up">
+        <li class="nav-item active">
+          <a class="nav-link" data-toggle="modal" data-target="#sign-up">Create Account<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#sign-in">Sign In<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+
+      <!-- signed in user nav -->
+      <ul class="navbar-nav mr-auto nav-out">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#cp">Change Password<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <button id="sign-out" class="btn btn-light sign-out-btn" type="submit">Log Out</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+      <!-- Sign Up Modal -->
+      <div class="modal fade" id="sign-up">
+      <!-- <div class="modal fade" id="sign-up"> -->
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h3>Sign up to explore Rhodypedia.</h3>
+          </div>
+          <div class="modal-body">
+            <form id="sign-up-form">
+              <div class="form-content">
+                <span class="form-span">Email</span>
+                <!-- <label>Email</label> -->
+                <input class="input modal-input" name="credentials[email]" type="text">
+              </div>
+              <div class="form-content">
+                <span class="form-span">Username</span>
+                <!-- <label>Username</label> -->
+                <input class="input modal-input" name="credentials[username]" type="text">
+              </div>
+              <div class="form-content">
+                <span class="form-span">Password</span>
+                <!-- <label>Password</label> -->
+                <input class="input modal-input" name="credentials[password]" type="password">
+              </div>
+              <div class="form-content">
+                <span class="form-span">Confirm Password</span>
+                <!-- <label>Confirm Password</label> -->
+                <input class="input modal-input" name="credentials[password_confirmation]" type="password">
+              </div>
+              <div class="form-content">
+                <input type="submit" value="Sign Up" class="btn btn-light"/>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="auth-message" id="message-up"></p>
+            <div id="skip-sign-up"><button id='skip' type="button" class="cls btn btn-light" data-toggle="modal" data-target="#sign-in" data-dismiss="modal">Already have an account?</button></div>
+            <div id="sign-up-close" class="close"><button type="button" class="cls btn btn-light" data-toggle="modal" data-dismiss="modal">Close</button></div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign In Modal -->
+      <div class="modal fade" id="sign-in">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h3>Sign in to share your Rhody secrets.</h3>
+          </div>
+          <div class="modal-body">
+            <form id="sign-in-form">
+              <div class="form-content">
+                <span class="form-span">Username</span>
+                <!-- <label>Username</label> -->
+                <input class="input modal-input" type="text" name="credentials[username]"></div>
+              <div class="form-content">
+                <span class="form-span">Email</span>
+                <!-- <label>Email</label> -->
+                <input class="input modal-input" name="credentials[email]" type="text"></div>
+              <div class="form-content">
+                <span class="form-span">Password</span>
+                <!-- <label>Password</label> -->
+                <input class="input modal-input" name="credentials[password]" type="password"></div>
+              <div class="form-content"><input type="submit" value="Sign In" class="btn btn-light"/></div>
+            </form>
+            <p class="auth-message" id="message-in"></p>
+          </div>
+          <div class="modal-footer">
+            <p class="auth-message" id="message-in"></p>
+            <div id="sign-in-close" class="close"><button type="button" class="cls btn btn-light" data-dismiss="modal">Close</button></div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Change Password Modal -->
+      <div class="modal fade" id="cp">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h3>Create a new password.</h3>
+          </div>
+          <div class="modal-body">
+            <form id="change-password-form">
+              <div class="form-content">
+                <span class="form-span">Old Password</span>
+                <input class="input modal-input" type="password" name="passwords[old]"></div>
+              <div class="form-content">
+                <span class="form-span">New Password</span>
+                <input class="input modal-input" type="password" name="passwords[new]"></div>
+              <div class="form-content">
+                <input type="submit" value="Change Password" class="btn btn-light"></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="auth-message" id="message-change"></p>
+            <div class="close"><button type="button" class="cls btn btn-light" data-dismiss="modal">Close</button></div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header with searchbar -->
+      <div class="heading">
+        <h1 class="title">Rhodypedia</h1>
+        <div class="flag"><img src="./public/images/flag.svg.png" alt="Rhode Island Flag"></div>
+        <form class="search">
+        <input class="searchbar" type="text" name="search" value="">
+        <span class="fontawesome"><button id="mag" type="submit"><i class="fa fa-search fa-lg"></i></button></span>
+        </form>
+      </div>
+
+      <!-- App details section -->
+      <div id="jumbo" class="jumbotron">
+        <h1 id="jumbo-header" class="display-4">A Wicked Awesome App</h1>
+        <p class="lead">Rhode Island might be the smallest state, but it has a whole lot of character and a gorgeous
+          landscape riddled with hidden gems. From secret beaches to historical landmarks tucked away in recreational areas,
+          the beauty of the nation's smallest state is truly inspiring. We created this app to offer all Rhode Islanders
+          the chance to share their Rhody secrets with the world and showcase Rhody wonder.
+          </p>
+        <hr class="my-4">
+        <p><span data-toggle="modal" data-target="#sign-up"><a>Sign up</a></span> to share your knowledge, or click the start exploring button to start getting information.</p>
+        <p class="lead">
+          <button id="get" class="btn btn-light btn-lg" role="button">Start Exploring</button>
+          <button id="create" class="btn btn-light btn-lg" role="button">Start Creating</button>
+        </p>
+      </div>
+
+    <!-- Create Form -->
+    <div id="main-create" class="container-fluid">
+      <form id="create-form" class="create-content">
+        <div class="form-group">
+          <label>Title</label>
+          <input name="site[name]" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="...Example: Beavertail State Park">
+          <small class="form-text text-muted">Please use official names when possible.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Keywords</label>
+          <input id="keywords" name="site[keywords]" type="text" class="form-control" placeholder="...Example: Lighthouses, Parks, Narragansett Bay">
+          <small class="form-text text-muted">Up to 3 seperated with commas.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Description</label>
+          <textarea name="site[description]" id="description" class="form-control" rows="8"></textarea>
+        </div>
+        <div class="form-content">
+          <input id="add-button" type="submit" value="Publish to the world!" class="btn btn-light"></div>
+          <p id="add-site-message"></p>
+      </form>
+    </div>
+
+    <!-- Searchbar results section-->
+    <div id="main-search" class="container-fluid">
+          <div id="content-search" class="content container">
+            <div class="blogs">
+            </div>
+          </div>
+    </div>
+
+    <!-- Start exploring results -->
+    <main id="main-get" class="container-fluid">
+          <div id="content" class="content container">
+            <div class="blogs">
+            </div>
+          </div>
+    </main>
+
+    </body>
+</html>
