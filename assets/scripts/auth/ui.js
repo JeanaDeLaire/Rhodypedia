@@ -24,7 +24,10 @@ const signUpFailure = () => {
 const signInSuccess = data => {
   // set stored user to data returned from CRUD
   store.user = data.user
-  $('#sign-in').modal('hide')
+  // $('#sign-in').modal('hide')
+  // swap nav with signed in user nav
+  $('.nav-up').toggle()
+  $('.nav-out').toggle()
   // clear form
   $('input:text, input:password').val('')
   $('#sign-out').text('Log Out')
@@ -58,6 +61,9 @@ const signOutSuccess = data => {
   // clear stored user
   store.user = null
   // change text of the button to reflect that a user is signed out
+  // swap signed in nav with signed out nav
+  $('.nav-up').toggle()
+  $('.nav-out').toggle()
   $('#sign-out').text('You are now logged out.')
   // clear all forms as an added precaution
   $('input:text, input:password').val('')
