@@ -24,7 +24,7 @@ const signUpFailure = () => {
 const signInSuccess = data => {
   // set stored user to data returned from CRUD
   store.user = data.user
-  // $('#sign-in').modal('hide')
+  $('#sign-in').modal('hide')
   // swap nav with signed in user nav
   $('.nav-up').toggle()
   $('.nav-out').toggle()
