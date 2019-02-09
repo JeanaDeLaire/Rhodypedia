@@ -30,8 +30,8 @@ const signInSuccess = data => {
   $('.nav-out').toggle()
   // clear form
   $('input:text, input:password').val('')
-  $('#sign-out').text('Log Out')
-  // $('#sign-in-close').show()
+  // toggle close the navbar
+  $('.navbar-collapse').collapse('hide')
 }
 
 // change message at the bottom of sign in modal if failed login
@@ -64,7 +64,6 @@ const signOutSuccess = data => {
   // swap signed in nav with signed out nav
   $('.nav-up').toggle()
   $('.nav-out').toggle()
-  $('#sign-out').text('You are now logged out.')
   // clear all forms as an added precaution
   $('input:text, input:password').val('')
   // close the navbar
